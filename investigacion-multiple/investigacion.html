@@ -1,5 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
-  
+  <head>
+    <meta charset="UTF-8" />
+    <title>Investigación múltiple | Intro al desarrollo web </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <h1>Investigación HTML</h1>
+    <p>Tania Mendoza González</p>
+    <img src="html.jpg" alt="Imagen HTML" width="1500" height="500"/>
+    <section id="Etiquetas">
+        <h2>Etiquetas semánticamente diferentes</h2>
+        <p>En html, existen etiquetas que tienen los mismos resultados visualmente, pero
+            que son semánticamente diferentes. 
+            <br>A continuación, analizaremos 3 de ellas para identificar sus diferencias:
+            <ul>
+                <li><h3>bold vs. strong</h3>
+                    Ambas tienen como resultado que el texto esté en negritas. 
+                <br>Sin embargo, mientras el propósito de la etiqueta "bold" es solo estilístico,
+                la etiqueta "strong" sirve para denotar que el texto es importante, es decir,
+                tiene un propósito semántico.</li>
+
+                <li><h3>i vs. em</h3>
+                    Las dos tienen como resultado que el texto esté en cursivas. 
+                    <br>Pero mientras el propósito de la etiqueta "i" es solo dar estilo, la etiqueta "em" 
+                    sirve para agregar un énfasis semántico al texto.</li>
+
+                <li><h3>s vs. del</h3>
+                    Ambas tienen como resultado que el texto esté tachado. 
+                    <br> Sin embargo, que la etiqueta "s" 
+                    es solo por presentación, la etiqueta "del" sirve para denotar 
+                    que el texto ha sido eliminado.</li>
+                
+                <h3>Conclusión</h3>
+                Por lo tanto, aunque las etiquetas se ven iguales, la diferencia radica en que:
+                <br><b>bold</b>, <i>italic</i> y <s>strikethrough</s> son estilísticas y 
+                <br><strong>strong</strong>, <em>emphasis</em> y <del>deleted</del> son semánticas,
+                e influyen en motores de búsqueda y herramientas de accesibilidad.
+            </ul>
+        </p>
+
+    </section>
+
+    <section id="elementos">
+        <h2>Elementos de línea y elementos de bloque</h2>
+        <p>Ahora, exploraremos los distintos tipos de categorías que se le pueden dar a 
+            los elementos o etiquetas en html.</p>
+
+        <ul>
+            <li><h3>Elementos de línea</h3> Sólo ocupan el ancho necesario, y no comienzan
+            en una nueva línea. Ejemplos:
+            <ul>
+                <li>Un <a href="https://www.w3schools.com/html/html_blocks.asp">enlace</a> dentro de un párrafo.</li>
+                <li>Un texto en <b>negritas</b></b>.</li>
+                <li>Un <code>Print("fragmento de código");</code></li>
+                <li>Un <sup>superíndice</sup>.</li>
+                <li>Una <q>cita breve</q></li>
+            </ul></li>
+            <li><h3>Elementos de bloque</h3> Ocupan todo el ancho disponible, y siempre
+            comienzan en una nueva línea. Los navegadores dejan un espacio de margen antes 
+            y después de ellos. Ejemplos: </li>
+             <ul>              
+                <li>
+                    <header>
+                        Un <strong>header</strong> de sección.
+                    </header>
+                </li>
+                <li>
+                    <section>
+                        Una <strong>sección</strong> de la página.
+                    </section>
+                </li>
+                <li>
+                    <article>
+                        Un <strong>artículo</strong> independiente.
+                    </article> 
+                </li>
+                <li>
+                    <footer>
+                        Un <strong>footer</strong> de sección.
+                    </footer>
+                </li>
+                <li>
+                    <aside>
+                        Un <strong>aside</strong> de la página (contenido relacionado pero no esencial).
+                    </aside>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    </section>
+
+    <section id="Formularios">
+        <h2>Formularios en HTML</h2>
+        <p>Ahora, investigaremos sobre los campos que podemos usar en un formulario HTML.</p>
+        <ul>
+            <li>
+                <h3>input</h3>
+                <p>Se usa para crear campos de entrada de datos.
+                <br>Propiedades: type, name, value, placeholder
+                <br>Ejemplos de los 7 distintos valores que puede tener la propiedad "type":</p>
+                <ol>
+                    <li>Text: <input type="text" placeholder="Escribe tu nombre"></li>
+                    <li>Password: <input type="password" placeholder="Escribe tu contraseña"></li>
+                    <li>Email: <input type="email" placeholder="Escribe tu correo"></li>
+                    <li>Number: <input type="number" placeholder="Escribe tu edad"></li>
+                    <li>Date: <input type="date"></li>
+                    <li>Color: <input type="color"></li>
+                    <li>File: <input type="file"></li>
+                </ol>
+                
+            </li>
+
+            <li>
+                <h3>label</h3>
+                Etiqueta asociada a un campo del formulario.
+                <br>Propiedades: for
+                <br>Ejemplo:
+                <br><label for="correo">Correo:</label>
+                <input type="email" id="correo">
+            </li>
+            <li>
+                <h3>output</h3>
+                Muestra el resultado de un cálculo o acción.
+                <br>Propiedades: for, name
+                <br>Ejemplo (de w3schools):
+                <br><form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                <input type="range" id="a" value="50">
+                +<input type="number" id="b" value="25">
+                =<output name="x" for="a b"></output>
+                </form> 
+                <br>El numero resultante es un output.
+                <br>Fuente: <a href="https://www.w3schools.com/tags/tag_output.asp">w3schools</a>
+            </li>
+            
+            <li>
+                <h3>progress</h3>
+                Barra de progreso para mostrar estado de una tarea.
+                <br>Propiedades: value, max
+                <br>Ejemplo:
+                <br><progress value="80" max="100"></progress>
+            </li>
+
+            <li>
+                <h3>select y option</h3>
+                Dos etiquetas que crean un menú desplegable con opciones.
+                <br>Propiedades: name, multiple (para select) y value, selected (para option).
+                <br>Ejemplo:
+                <br>
+                <select name="Fruta preferida:">
+                <option value="Manzana">Manzana</option>
+                <option value="Mango">Mango</option>
+                <option value="Uva">Uva</option>
+                <option value="Pera">Pera</option>
+                <option value="Kiwi">Kiwi</option>
+                </select>
+            </li>
+
+            <li>
+                <h3>textarea</h3>
+                Permite al usuario escribir un texto de varias líneas.
+                <br>Propiedades: rows, cols, placeholder
+                <br>Ejemplo:
+                <br><textarea rows="3" cols="30" placeholder="Escribe un poema"></textarea>
+            </li>
+        </ul>
+
+
+    </section>
+
+  </body>
+
+
 
 </html>
