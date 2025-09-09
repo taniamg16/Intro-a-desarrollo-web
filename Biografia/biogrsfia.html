@@ -4,53 +4,151 @@
     <meta charset="UTF-8" />
     <title>Biografía| Intro al desarrollo web </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body { background-color: #ffffff; color: #222; font-family: "Times New Roman", Times, serif; }
+        p { color: #444; line-height: 1.6; }
+        h1 { color: rgb(0, 0, 0); text-align: center; text-decoration: underline;}
+        h2 { color: #00509e; text-shadow: 1px 1px 3px #aaa; }
+        h3 { color: #0077b6; }
+
+        #Datos_Curiosos {
+            background-color: #f0f8ff; 
+            border: none;         
+            border-radius: 12px;  
+            padding: 1rem;
+        }
+
+        .texto-footer { color: #ffffff; text-align: center; margin-top: 2rem; }
+        .barra { background-color: #0e1730; padding: 1rem; text-align: center; }
+        .link { color: #fff; margin: 0 0.5rem; text-decoration: none; }
+        .link:hover { color: #74a6be; text-decoration: underline; }
+
+        .img-borde { border: 5px solid #0077b6; box-shadow: 4px 4px 8px rgba(0,0,0,0.3); margin: 1rem auto; display: block }
+        .img-punteado { border: 2px dotted #0077b6; border-radius: 8px; }
+        .fondo-imagen {
+        background-color: #f0f8ff; 
+        padding: 1rem;            
+        border-radius: 8px;       
+        }
+
+        .btn { background-color: #0077b6; color: white; padding: 0.5rem 1rem; border: none; border-radius: 8px;
+            cursor: pointer; box-shadow: 2px 2px 5px rgba(0,0,0,0.2); }
+        .btn:hover { background-color: #00b4d8; }
+
+        .lista { padding: 1rem; background-color: #f0f8ff; }
+
+        .footer { background-color: #0e1730; color: white; padding: 1.5rem; text-align: center;
+                box-shadow: 0 -2px 5px rgba(0,0,0,0.3); }
+
+        @media (max-width: 500px) { /*NOTA: con 400 no funcionaba*/
+            .ocultar {
+                display: none; 
+            }
+        }
+        @media (max-width: 700px) { 
+            .fondo-imagen {
+                background-color: #8289c8;  
+            }
+        }
+            
+        @media (max-width: 500px) { /*NOTA: con 300 no funcionaba*/
+            .fondo-imagen {
+                background-color: #759c77;  
+            }
+        }
+    </style>
+    
   </head>
 
   <body>
-    <h1>Biografía de Marie Curie</h1>
-    <p></p>
-    <img src="https://www.nobelprize.org/images/marie-curie-12835-content-portrait-mobile-tiny.jpg" alt="Foto de Marie Curie" />
-    <section id="Biografia">
-        <h2>Biografía</h2>
-        <p>
-            Marie Curie (1867–1934) fue una científica polaca naturalizada francesa, pionera en el estudio de la radiactividad. 
-            Fue la primera mujer en recibir un Premio Nobel y la única persona en la historia en ganar dos Nobel en diferentes 
-            campos: Física (1903, compartido con Pierre Curie y Henri Becquerel) y Química (1911, por el descubrimiento del 
-            polonio y el radio).
-        </p>
-        <p>
-            Su trabajo revolucionó la ciencia al abrir nuevas fronteras en la física nuclear y la medicina, especialmente en 
-            terapias contra el cáncer mediante radiación. Fundó junto a su esposo Pierre Curie un laboratorio de investigación 
-            en París, donde desarrollaron métodos para aislar elementos radiactivos.
-        </p>
-        <p>
-            Además de sus descubrimientos, Marie Curie fue una gran defensora de la educación y la participación de las mujeres en 
-            la ciencia. Durante la Primera Guerra Mundial impulsó el uso de unidades móviles de rayos X en el frente. Su vida estuvo 
-            marcada por la dedicación a la investigación, que finalmente afectó su salud y la llevó a la muerte por anemia aplásica 
-            causada por la exposición prolongada a la radiación.
-        </p>
+    <header>
+        <nav class ="barra">
+        <a href="#Biografia" class="link">Biografía</a> |
+        <a href="#Aportaciones a la Ciencia" class="link">Aportaciones a la Ciencia</a> |
+        <a href="#Datos Curiosos" class="link">Datos Curiosos</a> |
+        <a href="https://www.bbc.com/mundo/noticias-59172486" class="link" target="_blank">¿Por qué sus cuadernos se se encuentran guardados bajo varias capas de plomo?</a> |
+        <a href="https://www.plataformaeditorial.com/libro/8917-marie-curie?srsltid=AfmBOopPV7DIpdGCUgIHH1CzUyByBjPP8IaE73KYpd5LlOVC2ZYm8DIZ" class="link" target="_blank">Obtén el Libro de Marie Curie</a>
 
-    </section>
-    <section id="Aportaciones a la Ciencia">
-        <h2>Aportaciones a la ciencia</h2>
-        <ul>
-            <li>Descubrimiento del polonio y el radio.</li>
-            <li>Desarrollo del concepto de radiactividad y técnicas para medirla.</li>
-            <li>Creación de métodos químicos para aislar elementos radiactivos en cantidades medibles.</li>
-            <li>Aplicación de la radiación en el tratamiento de tumores (radioterapia).</li>
-            <li>Implementación de unidades móviles de rayos X durante la Primera Guerra Mundial.</li>
-            <li>Fundación del Instituto Curie, centro de investigación de referencia en física y medicina.</li>
-        </ul>
-        <h3>Premios Nobel</h3>
-        <ol>
-            <li>Premio Nobel de Física en 1903 por los estudios sobre radiación.</li>
-            <li>Premio Nobel de Química en 1911 por el aislamiento del radio y el polonio.</li>
-        </ol>
+    </nav>
+</header>
+<main>
 
-        <img src="https://content-historia.nationalgeographic.com.es/medio/2022/03/29/marie-curie_f45f6f98_550x799.jpg" alt="Foto de Marie Curie" width="400" height="500"/>
+        <div class="fondo-imagen">
+            <h1>Marie Curie: la madre de la física moderna</h1>
+            <img src="https://www.nobelprize.org/images/marie-curie-12835-content-portrait-mobile-tiny.jpg" alt="Foto de Marie Curie perfil" class="img-borde"/>
+        </div>
+        <section id="Biografia">
+            <article>
+                <h2>Biografía</h2>
+                <p>
+                    Marie Curie (1867–1934) fue una científica polaca naturalizada francesa, pionera en el estudio de la radiactividad. 
+                    Fue la primera mujer en recibir un Premio Nobel y la única persona en la historia en ganar dos Nobel en diferentes 
+                    campos: Física (1903, compartido con Pierre Curie y Henri Becquerel) y Química (1911, por el descubrimiento del 
+                    polonio y el radio).
+                </p>
+                <p>
+                    Su trabajo revolucionó la ciencia al abrir nuevas fronteras en la física nuclear y la medicina, especialmente en 
+                    terapias contra el cáncer mediante radiación. Fundó junto a su esposo Pierre Curie un laboratorio de investigación 
+                    en París, donde desarrollaron métodos para aislar elementos radiactivos.
+                </p>
+                <p>
+                    Además de sus descubrimientos, Marie Curie fue una gran defensora de la educación y la participación de las mujeres en 
+                    la ciencia. Durante la Primera Guerra Mundial impulsó el uso de unidades móviles de rayos X en el frente. Su vida estuvo 
+                    marcada por la dedicación a la investigación, que finalmente afectó su salud y la llevó a la muerte por anemia aplásica 
+                    causada por la exposición prolongada a la radiación.
+                </p>
+            </article>
+        </section>
+        <hr />
+        <section id="Aportaciones_a_la_Ciencia">
+            <h2>Aportaciones a la ciencia</h2>
+            <ul class="lista">
+                <li>Descubrimiento del <span style="color:blue">polonio</span> y el <span style="color:blue">radio</span>.</li>
+                <li>Desarrollo del concepto de <span style="color:blue">radiactividad</span> y técnicas para medirla.</li>
+                <li>Creación de métodos químicos para aislar elementos radiactivos en cantidades medibles.</li>
+                <li>Aplicación de la radiación en el tratamiento de tumores (<span style="color:blue">radioterapia</span>).</li>
+                <li>Implementación de unidades móviles de <span style="color:blue">rayos X</span> durante la Primera Guerra Mundial.</li>
+                <li>Fundación del Instituto Curie, centro de investigación de referencia en física y medicina.</li>
+            </ul>
+            <h3>Premios Nobel</h3>
+            <ol class="lista">
+                <li>Premio Nobel de Física en 1903 por los estudios sobre radiación.</li>
+                <li>Premio Nobel de Química en 1911 por el aislamiento del radio y el polonio.</li>
+            </ol>
+
+            <img src="https://content-historia.nationalgeographic.com.es/medio/2022/03/29/marie-curie_f45f6f98_550x799.jpg" alt="Foto de Marie Curie de frente" width="400" height="500" class="img-borde"/>
 
 
-    </section>
+            </section>
+            <hr />
+            <div id="Datos_Curiosos">
+                <h2>Datos Curiosos</h2>
+                <ul class="lista">
+                    <li>Marie Curie fue la primera mujer en obtener un título en la Universidad de París.</li>
+                    <li>Su nombre de soltera era Maria Skłodowska.</li>
+                    <li>Curie y su esposo Pierre compartieron el Premio Nobel de Física en 1903.</li>
+                    <li>Fue la primera persona en recibir dos premios Nobel en diferentes campos científicos.</li>
+                </ul>
+                <img src="https://cdn.zendalibros.com/wp-content/uploads/2022/12/matrimonio-curie-scaled.jpg" alt="Marie Curie y Pierre Curie" width="450" height="300" class="img-punteado"/>
+                <img src="https://media.es.wired.com/photos/6686b1697b15c73c87eac327/16:9/w_1920,c_limit/Marie_Curie_(c._1900)_(cropped).jpg" alt="Marie Curie y Pierre Curie" width="490" height="300" class="img-punteado"/>
+                <img src="https://e00-elmundo.uecdn.es/elmundo/imagenes/2012/04/08/ciencia/1333733480_0.jpg" alt="Marie Curie en su laboratorio" width="490" height="300" class="img-punteado ocultar"/>
+        </main>
+        <hr />
+        <footer class="footer">
+            <p class="texto-footer">¿Te apasiona la ciencia?</p>
+            <p class="texto-footer">¡Déjanos tu correo electrónico para descubrir más!</p>
+            <form action="#" method="post">
+                <label for="correo">Correo electrónico:</label><br />
+                <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" />
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+            <br />
+            <p class="texto-footer">Autor: Tania Mendoza González</p>
+            <p class="texto-footer"><a href="mailto:tmendoz4@itam.mx">tmendoz4@itam.mx</a></p>
+        </footer>
+    
+    </body>
 
+    
 
-  </body>
+  </html>
