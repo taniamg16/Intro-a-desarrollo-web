@@ -67,4 +67,8 @@ Ahora, crearemos 3 clases con al menos 3 atributos y 3 funciones/métodos. En es
 2. Maceta.js
 3. Fertilizante.js
 
-En cada una, se pueden ver los conceptos explicados hasta ahora, como el constructor y los métodos/funciones del objeto.
+En cada una, se pueden ver los conceptos explicados hasta ahora, como el constructor y los métodos/funciones del objeto :)
+
+
+## Referencias
+W3Schools. (2024). JavaScript Classes. Recuperado el 10 de octubre de 2025 de `https://www.w3schools.com/js/js_classes.asp`
