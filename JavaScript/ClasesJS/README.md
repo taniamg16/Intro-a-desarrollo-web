@@ -17,14 +17,14 @@ Como ya mencionamos, las clases en JavaScript tienen dos características princi
 
 ### Creación de instancias
 Para crear un objeto a partir de una clase, se usa la palabra clave new seguida del nombre de la clase, lo que genera una instancia de esa clase. La sintaxis básica es:
-```bash
+```javascript
 const miObjeto = new MiClase(arg1, arg2);
 ```
 
 Dentro de la clase, hay un método especial llamado constructor. TODAS las clases deberían tenerlo. Ese constructor es automáticamente invocado cuando se crea la instancia con new. Su papel es inicializar propiedades del objeto (por ejemplo, asignar valores a this.propiedad). 
 En la clase se define así:
 
-```bash
+```javascript
 class MiClase {
   constructor(param1, param2) {
     this.prop1 = param1;
@@ -39,7 +39,7 @@ Así, cuando haces instancias un objeto con new, el constructor recibe los argum
 ### Métodos y funciones
 Dentro de una clase, los métodos son funciones que definen comportamientos para los objetos creados con esa clase. Se escriben usando la misma sintaxis que las funciones normales, pero dentro del cuerpo de la clase, sin la palabra clave function. Por ejemplo:
 
-```bash
+```javascript
 class Alumno {
   constructor(nombre) {
     this.nombre = nombre;
@@ -54,7 +54,7 @@ class Alumno {
 ```
 
 Aquí saludar() y cambiarNombre(...) son métodos de la clase ALumno (funciones asociadas al objeto). Para llamarlos desde una instancia, se hace con la sintaxis de punto:
-```bash
+```javascript
 const a = new Alumno("Arantxa");
 p.saludar();
 p.cambiarNombre("Jaqueline")
