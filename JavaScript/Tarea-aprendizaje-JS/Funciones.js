@@ -158,3 +158,36 @@ function capitalizar_palabras(frase){
     arreglo = arreglo.join(" ")
     return arreglo
 }
+
+// 14)
+//Mezcla los elementos de dos listas
+// in: dos listas
+// out: una lista con los elementos alternados (se detiene cuando se acaba la mas corta)
+function mezclar_listas(lista1, lista2){
+    let lista3 = []
+    let longmin = Math.min(lista1.length, lista2.length);
+
+    for(let i=0; i<longmin; i++){
+        lista3.push(lista1[i]);
+        lista3-push(lista2[i]);
+    }
+
+    return lista3;
+}
+
+// 15)
+// Devuelve un diccionario con la frecuencia de cada elemento
+// in: lista
+// out: diccionario
+function  contar_frecuencia(lista){
+    const diccionario = {};
+    for (const i of lista) {
+    if (i in diccionario) {
+      diccionario[i] += 1;
+    } else {
+      diccionario[i] = 1;  
+    }
+  } 
+  return diccionario;
+}
+
